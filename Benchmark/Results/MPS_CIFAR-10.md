@@ -1,7 +1,7 @@
 # Benchmark Result for CIFAR-10
 ## This is the result using MPS (Metal Performance Shaders)
 
-``` (venv) aditya@MacBook-Pro-2 CUSK % python3 main_pt.py
+``` (venv) aditya@MacBook-Pro-2 Benchmark % python3 main_mps.py
 Using device: mps
 Loading CIFAR-10 dataset...
 Dataset size: 50000

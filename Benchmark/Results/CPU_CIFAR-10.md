@@ -1,7 +1,7 @@
 # Benchmark Result for CIFAR-10
 ## This is the result completely on CPU (No PyTorch, No MLX, No CUSK)
 
-```(venv) aditya@MacBook-Pro-2 CUSK % python3 main.py
+```(venv) aditya@MacBook-Pro-2 Benchmark % python3 main_cpu.py
 Loading CIFAR-10 dataset...
 Dataset size: 50000
 Number of batches: 782

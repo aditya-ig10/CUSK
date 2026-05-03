@@ -18,3 +18,5 @@ Epoch 5/5 | Loss: 702.740551 | Accuracy: 68.22% | Time: 32.00s
 Training Time: 154.85 seconds
 Total Execution Time: 154.88 seconds
 ```
+
+Note: scripts updated to include validation, augmentation, and early stopping. Run `python3 main_cpu.py` (or `--quick`) to reproduce and update these numbers.

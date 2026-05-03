@@ -17,3 +17,5 @@ Epoch 5/5 | Loss: 731.625965 | Accuracy: 67.05% | Time: 20.10s
 
 --- Benchmark Results (MPS) ---
 Training Time: 104.41 seconds```
+
+Note: scripts updated to include validation, augmentation, and early stopping. Run `python3 main_mps.py` (or `--quick`) to reproduce and update these numbers.

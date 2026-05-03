@@ -3,19 +3,18 @@
 
 ``` (venv) aditya@MacBook-Pro-2 Benchmark % python3 main_mps.py
 Using device: mps
-Loading CIFAR-10 dataset...
-Dataset size: 50000
-Number of batches: 782
+Loading dataset and building dataloaders...
 
-Starting training on CIFAR-10 with MPS...
+Starting training...
 
-Epoch 1/5 | Loss: 1219.723210 | Accuracy: 43.09% | Time: 23.95s
-Epoch 2/5 | Loss: 964.317696 | Accuracy: 55.68% | Time: 19.72s
-Epoch 3/5 | Loss: 855.111617 | Accuracy: 61.31% | Time: 19.64s
-Epoch 4/5 | Loss: 778.476578 | Accuracy: 64.78% | Time: 21.00s
-Epoch 5/5 | Loss: 731.625965 | Accuracy: 67.05% | Time: 20.10s
+Epoch 1/5 | Loss: 1.556418 | Accuracy: 43.16% | Val Loss: 1.198781 | Val Acc: 56.38%
+Epoch 2/5 | Loss: 1.238290 | Accuracy: 55.81% | Val Loss: 1.071678 | Val Acc: 62.60%
+Epoch 3/5 | Loss: 1.106870 | Accuracy: 60.70% | Val Loss: 0.968281 | Val Acc: 66.04%
+Epoch 4/5 | Loss: 1.012335 | Accuracy: 64.38% | Val Loss: 0.943936 | Val Acc: 66.98%
+Epoch 5/5 | Loss: 0.945802 | Accuracy: 66.77% | Val Loss: 0.878047 | Val Acc: 69.96%
 
 --- Benchmark Results (MPS) ---
-Training Time: 104.41 seconds```
+Training Time: 101.66 seconds
+Total Execution Time: 101.71 seconds ```
 
 Note: scripts updated to include validation, augmentation, and early stopping. Run `python3 main_mps.py` (or `--quick`) to reproduce and update these numbers.

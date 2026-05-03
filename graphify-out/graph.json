@@ -1,0 +1,712 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "main_mps.py",
+      "file_type": "code",
+      "source_file": "main_mps.py",
+      "source_location": "L1",
+      "id": "main_mps_py",
+      "community": 0,
+      "norm_label": "main_mps.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main_mps.py",
+      "source_location": "L7",
+      "id": "benchmark_main_mps_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "main_cpu.py",
+      "file_type": "code",
+      "source_file": "main_cpu.py",
+      "source_location": "L1",
+      "id": "main_cpu_py",
+      "community": 0,
+      "norm_label": "main_cpu.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main_cpu.py",
+      "source_location": "L7",
+      "id": "benchmark_main_cpu_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "run_smoke_tests.py",
+      "file_type": "code",
+      "source_file": "run_smoke_tests.py",
+      "source_location": "L1",
+      "id": "run_smoke_tests_py",
+      "community": 1,
+      "norm_label": "run_smoke_tests.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "run_smoke_tests.py",
+      "source_location": "L4",
+      "id": "benchmark_run_smoke_tests_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "train_helpers.py",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L1",
+      "id": "train_helpers_py",
+      "community": 4,
+      "norm_label": "train_helpers.py"
+    },
+    {
+      "label": "CIFAR10Dataset",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L12",
+      "id": "benchmark_train_helpers_cifar10dataset",
+      "community": 2,
+      "norm_label": "cifar10dataset"
+    },
+    {
+      "label": "Dataset",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "dataset",
+      "community": 2,
+      "norm_label": "dataset"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L16",
+      "id": "benchmark_train_helpers_cifar10dataset_init",
+      "community": 2,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".__len__()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L23",
+      "id": "benchmark_train_helpers_cifar10dataset_len",
+      "community": 2,
+      "norm_label": ".__len__()"
+    },
+    {
+      "label": ".__getitem__()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L26",
+      "id": "benchmark_train_helpers_cifar10dataset_getitem",
+      "community": 2,
+      "norm_label": ".__getitem__()"
+    },
+    {
+      "label": "SyntheticDataset",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L36",
+      "id": "benchmark_train_helpers_syntheticdataset",
+      "community": 3,
+      "norm_label": "syntheticdataset"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L38",
+      "id": "benchmark_train_helpers_syntheticdataset_init",
+      "community": 3,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".__len__()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L44",
+      "id": "benchmark_train_helpers_syntheticdataset_len",
+      "community": 3,
+      "norm_label": ".__len__()"
+    },
+    {
+      "label": ".__getitem__()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L47",
+      "id": "benchmark_train_helpers_syntheticdataset_getitem",
+      "community": 3,
+      "norm_label": ".__getitem__()"
+    },
+    {
+      "label": "Net",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L55",
+      "id": "benchmark_train_helpers_net",
+      "community": 0,
+      "norm_label": "net"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L56",
+      "id": "benchmark_train_helpers_net_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".forward()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L66",
+      "id": "benchmark_train_helpers_net_forward",
+      "community": 0,
+      "norm_label": ".forward()"
+    },
+    {
+      "label": "make_transforms()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L78",
+      "id": "benchmark_train_helpers_make_transforms",
+      "community": 4,
+      "norm_label": "make_transforms()"
+    },
+    {
+      "label": "make_dataloaders()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L94",
+      "id": "benchmark_train_helpers_make_dataloaders",
+      "community": 4,
+      "norm_label": "make_dataloaders()"
+    },
+    {
+      "label": "train()",
+      "file_type": "code",
+      "source_file": "train_helpers.py",
+      "source_location": "L115",
+      "id": "benchmark_train_helpers_train",
+      "community": 0,
+      "norm_label": "train()"
+    },
+    {
+      "label": "Lightweight synthetic dataset for smoke tests.",
+      "file_type": "rationale",
+      "source_file": "train_helpers.py",
+      "source_location": "L37",
+      "id": "benchmark_train_helpers_rationale_37",
+      "community": 3,
+      "norm_label": "lightweight synthetic dataset for smoke tests."
+    },
+    {
+      "label": "main_pytorch_optimized.py",
+      "file_type": "code",
+      "source_file": "main_pytorch_optimized.py",
+      "source_location": "L1",
+      "id": "main_pytorch_optimized_py",
+      "community": 0,
+      "norm_label": "main_pytorch_optimized.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "main_pytorch_optimized.py",
+      "source_location": "L7",
+      "id": "benchmark_main_pytorch_optimized_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "test_training_smoke.py",
+      "file_type": "code",
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L1",
+      "id": "tests_test_training_smoke_py",
+      "community": 1,
+      "norm_label": "test_training_smoke.py"
+    },
+    {
+      "label": "test_cpu_quick_train()",
+      "file_type": "code",
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L5",
+      "id": "tests_test_training_smoke_test_cpu_quick_train",
+      "community": 1,
+      "norm_label": "test_cpu_quick_train()"
+    },
+    {
+      "label": "test_mps_quick_train_if_available()",
+      "file_type": "code",
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L13",
+      "id": "tests_test_training_smoke_test_mps_quick_train_if_available",
+      "community": 1,
+      "norm_label": "test_mps_quick_train_if_available()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main_mps.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "main_mps_py",
+      "target": "benchmark_main_mps_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_mps.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "benchmark_main_mps_main",
+      "target": "benchmark_train_helpers_make_dataloaders"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_mps.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "benchmark_main_mps_main",
+      "target": "benchmark_train_helpers_net"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_mps.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "benchmark_main_mps_main",
+      "target": "benchmark_train_helpers_train"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main_cpu.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "main_cpu_py",
+      "target": "benchmark_main_cpu_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_cpu.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "benchmark_main_cpu_main",
+      "target": "benchmark_train_helpers_make_dataloaders"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_cpu.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "benchmark_main_cpu_main",
+      "target": "benchmark_train_helpers_net"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_cpu.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "benchmark_main_cpu_main",
+      "target": "benchmark_train_helpers_train"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "run_smoke_tests.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "run_smoke_tests_py",
+      "target": "benchmark_run_smoke_tests_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "run_smoke_tests.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "benchmark_run_smoke_tests_main",
+      "target": "tests_test_training_smoke_test_cpu_quick_train"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "run_smoke_tests.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "benchmark_run_smoke_tests_main",
+      "target": "tests_test_training_smoke_test_mps_quick_train_if_available"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "train_helpers_py",
+      "target": "benchmark_train_helpers_cifar10dataset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "train_helpers_py",
+      "target": "benchmark_train_helpers_syntheticdataset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "train_helpers_py",
+      "target": "benchmark_train_helpers_net",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "train_helpers_py",
+      "target": "benchmark_train_helpers_make_transforms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "train_helpers_py",
+      "target": "benchmark_train_helpers_make_dataloaders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "train_helpers_py",
+      "target": "benchmark_train_helpers_train",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_cifar10dataset",
+      "target": "dataset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_cifar10dataset",
+      "target": "benchmark_train_helpers_cifar10dataset_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_cifar10dataset",
+      "target": "benchmark_train_helpers_cifar10dataset_len",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_cifar10dataset",
+      "target": "benchmark_train_helpers_cifar10dataset_getitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_make_dataloaders",
+      "target": "benchmark_train_helpers_cifar10dataset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_syntheticdataset",
+      "target": "dataset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_syntheticdataset",
+      "target": "benchmark_train_helpers_syntheticdataset_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_syntheticdataset",
+      "target": "benchmark_train_helpers_syntheticdataset_len",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_syntheticdataset",
+      "target": "benchmark_train_helpers_syntheticdataset_getitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_make_dataloaders",
+      "target": "benchmark_train_helpers_syntheticdataset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_rationale_37",
+      "target": "benchmark_train_helpers_syntheticdataset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_net",
+      "target": "benchmark_train_helpers_net_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_net",
+      "target": "benchmark_train_helpers_net_forward",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_pytorch_optimized.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "benchmark_main_pytorch_optimized_main",
+      "target": "benchmark_train_helpers_net"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "tests_test_training_smoke_test_cpu_quick_train",
+      "target": "benchmark_train_helpers_net"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "tests_test_training_smoke_test_mps_quick_train_if_available",
+      "target": "benchmark_train_helpers_net"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "train_helpers.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "benchmark_train_helpers_make_dataloaders",
+      "target": "benchmark_train_helpers_make_transforms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_pytorch_optimized.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "benchmark_main_pytorch_optimized_main",
+      "target": "benchmark_train_helpers_make_dataloaders"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tests_test_training_smoke_test_cpu_quick_train",
+      "target": "benchmark_train_helpers_make_dataloaders"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tests_test_training_smoke_test_mps_quick_train_if_available",
+      "target": "benchmark_train_helpers_make_dataloaders"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "main_pytorch_optimized.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "benchmark_main_pytorch_optimized_main",
+      "target": "benchmark_train_helpers_train"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "tests_test_training_smoke_test_cpu_quick_train",
+      "target": "benchmark_train_helpers_train"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "tests_test_training_smoke_test_mps_quick_train_if_available",
+      "target": "benchmark_train_helpers_train"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "main_pytorch_optimized.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "main_pytorch_optimized_py",
+      "target": "benchmark_main_pytorch_optimized_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "tests_test_training_smoke_py",
+      "target": "tests_test_training_smoke_test_cpu_quick_train",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_training_smoke.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "tests_test_training_smoke_py",
+      "target": "tests_test_training_smoke_test_mps_quick_train_if_available",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

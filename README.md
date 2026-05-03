@@ -1,1 +1,1 @@
-#CUSK - Compute Unified Silicon Kernel
+# CUSK - Computed for Unified Silicon Kernel

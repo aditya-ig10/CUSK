@@ -2,3 +2,6 @@ idea.md
 venv/
 Benchmark/CIFAR-10/
 Phase.md
+graphify-out/
+#Benchmark/__pycache__/
+.venv/

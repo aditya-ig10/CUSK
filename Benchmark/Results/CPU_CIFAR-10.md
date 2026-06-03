@@ -1,21 +1,25 @@
-# Benchmark Result for CIFAR-10
-## This is the result completely on CPU (No PyTorch, No MLX, No CUSK)
+# Benchmark Result for CIFAR-10 (CPU)
+## Improved Model with BatchNorm, Enhanced Augmentation, LR Scheduling
 
-```(venv) aditya@MacBook-Pro-2 Benchmark % python3 main_cpu.py
+```
+(venv) aditya@MacBook-Pro-2 Benchmark % python3 main_cpu.py --epochs 5
 Using device: cpu
 Loading dataset and building dataloaders...
 
 Starting training...
 
-Epoch 1/5 | Loss: 1.613271 | Accuracy: 41.32% | Val Loss: 1.289158 | Val Acc: 54.54%
-Epoch 2/5 | Loss: 1.298879 | Accuracy: 53.07% | Val Loss: 1.099877 | Val Acc: 60.72%
-Epoch 3/5 | Loss: 1.160165 | Accuracy: 58.71% | Val Loss: 1.019876 | Val Acc: 64.42%
-Epoch 4/5 | Loss: 1.067757 | Accuracy: 62.19% | Val Loss: 0.957373 | Val Acc: 65.94%
-Epoch 5/5 | Loss: 0.996002 | Accuracy: 64.90% | Val Loss: 0.920277 | Val Acc: 67.88%
+Epoch 1/5 | Loss: 1.335390 | Acc: 51.71% | Val Loss: 1.012168 | Val Acc: 63.32% | Gap: -11.61%
+Epoch 2/5 | Loss: 0.968063 | Acc: 65.61% | Val Loss: 0.836402 | Val Acc: 70.14% | Gap: -4.53%
+Epoch 3/5 | Loss: 0.805786 | Acc: 71.63% | Val Loss: 0.744271 | Val Acc: 73.58% | Gap: -1.95%
+Epoch 4/5 | Loss: 0.681056 | Acc: 76.15% | Val Loss: 0.664228 | Val Acc: 76.60% | Gap: -0.45%
+Epoch 5/5 | Loss: 0.588540 | Acc: 79.62% | Val Loss: 0.636663 | Val Acc: 77.46% | Gap: 2.16%
 
 --- Benchmark Results (CPU) ---
-Training Time: 138.21 seconds
-Total Execution Time: 138.24 seconds
+Training Time: 201.18 seconds
+Total Execution Time: 201.22 seconds
 ```
 
-Note: scripts updated to include validation, augmentation, and early stopping. Run `python3 main_cpu.py` (or `--quick`) to reproduce and update these numbers.
+### Improvements vs Previous Run
+- Final Val Acc: **77.46%** (↑ 9.58% from 67.88%)
+- Overfitting gap well-controlled (2.16% in final epoch)
+- Better generalization with BatchNorm and improved augmentation

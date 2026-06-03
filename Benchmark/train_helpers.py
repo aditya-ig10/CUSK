@@ -53,21 +53,50 @@ class SyntheticDataset(Dataset):
 
 
 class Net(nn.Module):
+    """Improved CNN with BatchNorm and reduced overfitting."""
     def __init__(self):
         super().__init__()
+        # Conv block 1: 3x32x32 -> 32x32x32 -> 32x16x16
         self.conv1 = nn.Conv2d(3, 32, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
+        self.bn1 = nn.BatchNorm2d(32)
         self.pool = nn.MaxPool2d(2, 2)
-        self.relu = nn.ReLU()
-        self.fc1 = nn.Linear(64 * 8 * 8, 128)
-        self.fc2 = nn.Linear(128, 10)
-        self.dropout = nn.Dropout(0.5)
+        self.relu = nn.ReLU(inplace=True)
+        
+        # Conv block 2: 32x16x16 -> 64x16x16 -> 64x8x8
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
+        self.bn2 = nn.BatchNorm2d(64)
+        
+        # Conv block 3: 64x8x8 -> 128x8x8 -> 128x4x4 (additional layer for better feature extraction)
+        self.conv3 = nn.Conv2d(64, 128, kernel_size=3, padding=1)
+        self.bn3 = nn.BatchNorm2d(128)
+        
+        # FC layers: 128x4x4 = 2048 -> 256 -> 10
+        self.fc1 = nn.Linear(128 * 4 * 4, 256)
+        self.fc2 = nn.Linear(256, 10)
+        
+        # Reduced dropout to avoid underfitting (from 0.5 to 0.3)
+        self.dropout = nn.Dropout(0.3)
 
     def forward(self, x):
-        x = self.relu(self.conv1(x))
+        # Conv block 1
+        x = self.conv1(x)
+        x = self.bn1(x)
+        x = self.relu(x)
         x = self.pool(x)
-        x = self.relu(self.conv2(x))
+        
+        # Conv block 2
+        x = self.conv2(x)
+        x = self.bn2(x)
+        x = self.relu(x)
         x = self.pool(x)
+        
+        # Conv block 3
+        x = self.conv3(x)
+        x = self.bn3(x)
+        x = self.relu(x)
+        x = self.pool(x)
+        
+        # Flatten and FC layers
         x = x.view(x.size(0), -1)
         x = self.relu(self.fc1(x))
         x = self.dropout(x)
@@ -78,8 +107,10 @@ class Net(nn.Module):
 def make_transforms(train=True):
     if train:
         return transforms.Compose([
-            transforms.RandomHorizontalFlip(),
+            transforms.RandomHorizontalFlip(p=0.5),
             transforms.RandomCrop(32, padding=4),
+            transforms.RandomRotation(10),  # ±10 degree rotation
+            transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
             transforms.ToTensor(),
             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
         ])
@@ -115,11 +146,19 @@ def make_dataloaders(img_dir=None, labels_csv=None, batch_size=64, val_split=0.1
 def train(model, device, train_loader, val_loader=None, epochs=5, lr=1e-3, patience=3):
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
+    
+    # Learning rate scheduler: cosine annealing for smooth decay
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
+    
     model.to(device)
 
     best_val_loss = float('inf')
     best_epoch = 0
-    history = {'train_loss': [], 'train_acc': [], 'val_loss': [], 'val_acc': []}
+    history = {
+        'train_loss': [], 'train_acc': [], 
+        'val_loss': [], 'val_acc': [],
+        'overfitting_gap': []  # track train_acc - val_acc to detect overfitting
+    }
 
     start_train = time.time()
     for epoch in range(epochs):
@@ -167,10 +206,14 @@ def train(model, device, train_loader, val_loader=None, epochs=5, lr=1e-3, patie
         history['train_acc'].append(train_acc)
         history['val_loss'].append(val_loss)
         history['val_acc'].append(val_acc)
+        
+        # Track overfitting: gap between train and val accuracy
+        overfitting_gap = train_acc - val_acc if val_acc is not None else 0
+        history['overfitting_gap'].append(overfitting_gap)
 
-        epoch_info = f"Epoch {epoch+1}/{epochs} | Loss: {train_loss:.6f} | Accuracy: {train_acc:.2f}%"
+        epoch_info = f"Epoch {epoch+1}/{epochs} | Loss: {train_loss:.6f} | Acc: {train_acc:.2f}%"
         if val_loss is not None:
-            epoch_info += f" | Val Loss: {val_loss:.6f} | Val Acc: {val_acc:.2f}%"
+            epoch_info += f" | Val Loss: {val_loss:.6f} | Val Acc: {val_acc:.2f}% | Gap: {overfitting_gap:.2f}%"
         print(epoch_info)
 
         # Early stopping
@@ -180,6 +223,9 @@ def train(model, device, train_loader, val_loader=None, epochs=5, lr=1e-3, patie
         elif val_loss is not None and (epoch - best_epoch) >= patience:
             print(f"Early stopping at epoch {epoch+1}")
             break
+        
+        # Step scheduler
+        scheduler.step()
 
     total_time = time.time() - start_train
     return history, total_time

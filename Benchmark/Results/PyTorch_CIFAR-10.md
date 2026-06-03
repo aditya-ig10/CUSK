@@ -1,20 +1,25 @@
-# Benchmark Result for CIFAR-10
-## This is the result using PyTorch Optimised 
+# Benchmark Result for CIFAR-10 (PyTorch Optimized)
+## Improved Model with BatchNorm, Enhanced Augmentation, LR Scheduling, num_workers=4
 
-```(venv) aditya@MacBook-Pro-2 Benchmark % python3 main_pytorch_optimized.py          
+```
+(venv) aditya@MacBook-Pro-2 Benchmark % python3 main_pytorch_optimized.py --epochs 5 --num-workers 4
 Using device: mps
 Loading dataset and building dataloaders (optimized)...
 
 Starting optimized training...
 
-Epoch 1/5 | Loss: 1.608135 | Accuracy: 41.63% | Val Loss: 1.301569 | Val Acc: 54.38%
-Epoch 2/5 | Loss: 1.269080 | Accuracy: 54.31% | Val Loss: 1.118496 | Val Acc: 60.30%
-Epoch 3/5 | Loss: 1.120572 | Accuracy: 60.35% | Val Loss: 1.030596 | Val Acc: 63.42%
-Epoch 4/5 | Loss: 1.028016 | Accuracy: 63.84% | Val Loss: 0.981083 | Val Acc: 65.36%
-Epoch 5/5 | Loss: 0.963734 | Accuracy: 65.87% | Val Loss: 0.919480 | Val Acc: 67.08%
+Epoch 1/5 | Loss: 1.373904 | Acc: 50.02% | Val Loss: 1.060961 | Val Acc: 61.80% | Gap: -11.78%
+Epoch 2/5 | Loss: 0.964484 | Acc: 65.95% | Val Loss: 0.927497 | Val Acc: 67.24% | Gap: -1.29%
+Epoch 3/5 | Loss: 0.804215 | Acc: 71.99% | Val Loss: 0.781393 | Val Acc: 73.00% | Gap: -1.01%
+Epoch 4/5 | Loss: 0.690549 | Acc: 76.02% | Val Loss: 0.713984 | Val Acc: 74.78% | Gap: 1.24%
+Epoch 5/5 | Loss: 0.603915 | Acc: 79.13% | Val Loss: 0.679829 | Val Acc: 76.50% | Gap: 2.63%
 
 --- Benchmark Results (PyTorch Optimized) ---
-Training Time: 285.41 seconds
-Total Execution Time: 285.46 seconds
-
+Training Time: 295.52 seconds
+Total Execution Time: 295.59 seconds
 ```
+
+### Improvements vs Previous Run
+- Final Val Acc: **76.50%** (↑ 9.42% from 67.08%)
+- Overfitting gap well-controlled (2.63% in final epoch)
+- Larger batch size (128) and num_workers=4 used
